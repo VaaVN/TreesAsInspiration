@@ -1,0 +1,19 @@
+@import url("reset.css");
+body {
+  background: linear-gradient(225deg, #000 0%, #21191b 63.94%, #21191b 100%);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  overflow: hidden;
+}
+img {
+  height: 100svh;
+}
+.purp {
+  width: 156px;
+  height: 156px;
+  border-radius: 111px;
+  position: absolute;
+  background: rgba(223, 82, 82, 0.1);
+  backdrop-filter: blur(8.100000381469727px);
+  user-select: none;
+}
