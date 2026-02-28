@@ -5,49 +5,51 @@ body {
   align-items: flex-start;
 }
 h1{
-  color: #FEF3B1;
   text-align: center;
   font-size: 128px;
   font-style: normal;
   font-weight: 400;
   line-height: 104%;
+  transform: rotate(-90deg);
 }
-.h2{
-  color: #FEF3B1;
+h2{
   text-align: right;
   font-size: 96px;
   font-style: normal;
   font-weight: 400;
   line-height: 130%;
 }
+div{
+  width: 100%;
+  height: 100%;
+}
 .screen{
   display: flex;
   flex-direction: row;
   align-items: flex-start;
   align-self: stretch;
-  height: 100vsh
+  height: 100svh;
 }
 .yellow{
-  color: #E0A03F;
-}
-.white{
+  background-color: #E0A03F;
   color:#FEF3B1;
 }
-.red{
+.white{
+  background-color:#FEF3B1;
   color:#9F2B2C;
 }
-.blue{
-  color: #355D67;
+.red{
+  background-color:#9F2B2C;
+  color:#FEF3B1;
 }
-.titleText{
-  display:flex;
-  width: 55%;
-  flex-direction: column;
-  align-items: flex-start;
-  align-self: stretch;
+.blue{
+  background-color: #355D67;
+  color:#FEF3B1;
 }
 .title{
   display:flex;
+  height: 100%;
+  width: 100%;
   flex-direction:  column;
   align-items: center;
   justify-content: center;
@@ -61,4 +63,29 @@ h1{
   flex: 1 0 0;
   align-self: stretch;
   flex-wrap: wrap;
+}
+.columnBlock{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-self: stretch;
+  width: 100%;
+  height: 100%;
+}
+.rowBlock{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  align-self: stretch;
+  width: 100%;
+  height: 100%;
+}
+.subTitle{
+  display: flex;
+  flex-direction: column;
+  width: 128px;
+  align-self: stretch;
+  align-items: center;
+  justify-content: space-around;
+  padding: 0 10px;
 }
