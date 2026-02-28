@@ -1,19 +1,64 @@
 @import url("reset.css");
 body {
-  background: linear-gradient(225deg, #000 0%, #21191b 63.94%, #21191b 100%);
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
-  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
-img {
-  height: 100svh;
+h1{
+  color: #FEF3B1;
+  text-align: center;
+  font-size: 128px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 104%;
 }
-.purp {
-  width: 156px;
-  height: 156px;
-  border-radius: 111px;
-  position: absolute;
-  background: rgba(223, 82, 82, 0.1);
-  backdrop-filter: blur(8.100000381469727px);
-  user-select: none;
+.h2{
+  color: #FEF3B1;
+  text-align: right;
+  font-size: 96px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 130%;
+}
+.screen{
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  align-self: stretch;
+  height: 100vsh
+}
+.yellow{
+  color: #E0A03F;
+}
+.white{
+  color:#FEF3B1;
+}
+.red{
+  color:#9F2B2C;
+}
+.blue{
+  color: #355D67;
+}
+.titleText{
+  display:flex;
+  width: 55%;
+  flex-direction: column;
+  align-items: flex-start;
+  align-self: stretch;
+}
+.title{
+  display:flex;
+  flex-direction:  column;
+  align-items: center;
+  justify-content: center;
+}
+.titleGame{
+  display: flex;
+  padding: 0 20px;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  flex: 1 0 0;
+  align-self: stretch;
+  flex-wrap: wrap;
 }
