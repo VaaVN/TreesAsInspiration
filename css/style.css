@@ -21,12 +21,22 @@ h2 {
   font-weight: 400;
   line-height: 130%;
 }
+h3 {
+  text-align: center;
+  font-family: "Yiggivoo Unicode";
+  font-size: 64px;
+  font-weight: 400;
+}
 p {
   font-family: "Yiggivoo Unicode";
   font-size: 36px;
   font-style: normal;
   font-weight: 400;
   line-height: 119%;
+}
+img {
+  user-select: none;
+  -webkit-user-drag: none;
 }
 .screen {
   display: flex;
@@ -35,7 +45,6 @@ p {
   align-self: stretch;
   height: 100svh;
   box-sizing: border-box;
-  overflow: hidden;
 }
 .yellow {
   background-color: #e0a03f;
@@ -68,10 +77,6 @@ p {
   align-self: stretch;
   width: 100%;
   height: 100%;
-  background-image: url("../assets/img/TESTVFBBFB.svg");
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
 }
 .titleBrick {
   width: 215px;
@@ -104,8 +109,8 @@ p {
 }
 .titleTree {
   position: absolute;
-  left: -120%;
-  height: 100%;
+  left: -220%;
+  height: 102%;
 }
 .disc {
   display: flex;
@@ -113,11 +118,14 @@ p {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  width: 100%;
+  height: 100%;
 }
 .binarTree {
   height: 70%;
 }
 .endTree {
+  position: relative;
   display: flex;
   padding: 48px;
   justify-content: space-between;
@@ -132,21 +140,112 @@ p {
   align-self: stretch;
   width: 100%;
   height: 100%;
-  background-image: url("../assets/img/TESTFLOWER.svg");
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
 }
 .aboutMe {
   align-items: center;
   align-self: stretch;
   width: 100%;
   height: 100%;
-  background-image: url("../assets/img/TESTVFJBBOOOOX.svg");
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
+  cursor: url("../assets/img/hammerEnd.svg"), auto;
 }
+.game {
+  align-items: center;
+  align-self: stretch;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.compare {
+  align-items: center;
+  align-self: stretch;
+  width: 100%;
+  height: 100%;
+}
+
+.selectInfo {
+  display: flex;
+  width: 50svw;
+  height: 50swh;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.selector {
+  align-items: center;
+  align-self: stretch;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  h3,
+  p {
+    color: #9f2b2c;
+  }
+}
+.slider {
+  position: absolute;
+  transition: 0.4s ease-in-out;
+  display: flex;
+  left: 0;
+  flex-direction: row;
+  height: 100%;
+  width: fit-content;
+}
+.leftArrow {
+  position: absolute;
+  top: 50%;
+  z-index: 99;
+  left: 2%;
+  transform: translateY(-50%);
+}
+.rightArrow {
+  position: absolute;
+  top: 50%;
+  right: 2%;
+  z-index: 99;
+  transform: translateY(-50%);
+}
+.apple1 {
+  position: absolute;
+  height: 50%;
+  top: 3%;
+  left: 3%;
+}
+.apple2 {
+  position: absolute;
+  height: 35%;
+  top: 6%;
+  right: 3%;
+  rotate: 30deg;
+}
+.apple3 {
+  position: absolute;
+  height: 35%;
+  bottom: 3%;
+  left: 25%;
+  rotate: 90deg;
+}
+.apple4 {
+  position: absolute;
+  height: 50%;
+  rotate: -60deg;
+  right: 25%;
+  bottom: 20%;
+}
+.roots {
+  cursor: url("../assets/img/hammerGame.png"), auto;
+}
+.attack {
+  cursor: url("../assets/img/sword.png"), auto;
+}
+.endHover {
+  transition: 0.6s ease-in;
+  bottom: 0;
+  position: absolute;
+  z-index: 99;
+  width: 100%;
+  height: 100%;
+}
+/*
 @media (max-width: 1024px) {
   .screen {
     height: 200svh;
@@ -175,3 +274,4 @@ p {
     height: auto;
   }
 }
+*/

@@ -12,13 +12,18 @@
     />
   </head>
   <body>
-    <section class="screen white">
+    <section id="title" class="screen white">
       <div class="columnBlock">
         <div class="title blue">
           <h2>Деревья<br />как вдохновение</h2>
         </div>
         <div class="title yellow">
-          <img class="titleTree" src="assets\img\titleTree.svg" alt="" />
+          <img
+            class="titleTree"
+            data-js="tl-tree"
+            src="assets\img\titleTree.svg"
+            alt=""
+          />
         </div>
         <div class="title blue disc">
           <p>
@@ -30,53 +35,108 @@
       </div>
       <div class="white titleGame"></div>
     </section>
-    <section class="screen">
-      <div class="rowBlock">
-        <div class="subTitle yellow">
+    <section id="folklore" class="screen">
+      <div class="columnBlock">
+        <div class="subTitle white">
           <h1>ФОЛЬКЛОР</h1>
         </div>
-        <div class="red"></div>
+        <div class="red compare"></div>
       </div>
       <div class="columnBlock">
-        <div class="yellow"></div>
-        <div class="white disc">
-          <img src="assets\img\apple.svg" alt="" />
-          <img src="assets\img\apple.svg" alt="" />
-          <img src="assets\img\apple.svg" alt="" />
-          <img src="assets\img\apple.svg" alt="" />
-          <p hidden>
-            Почти у все народы видели в деревьях символ силы и жизненной
-            энергии. В многих мифах деревья, а так же их плоды имели особые
-            качества. Например как золотые яблоки в мифах древней Греции.
+        <div class="yellow selector">
+          <img
+            class="leftArrow"
+            data-js="fl-la"
+            src="assets\img\leftArrow.svg"
+            alt=""
+          />
+          <img
+            class="rightArrow"
+            data-js="fl-ra"
+            src="assets\img\rightArrow.svg"
+            alt=""
+          />
+          <div data-js="fl-slider" class="slider">
+            <div class="selectInfo">
+              <img src="assets\img\huluppu.svg" alt="" />
+              <h3>Хулуппу</h3>
+              <p>шумеры</p>
+            </div>
+            <div class="selectInfo">
+              <img src="assets\img\ashoka.svg" alt="" />
+              <h3>Ашока</h3>
+              <p>буддизм</p>
+            </div>
+            <div class="selectInfo">
+              <img src="assets\img\igdrasil.svg" alt="" />
+              <h3>Иггдрасиль</h3>
+              <p>скандинавы</p>
+            </div>
+            <div class="selectInfo">
+              <img src="assets\img\worldTree.svg" alt="" />
+              <h3>Мировое дерево</h3>
+              <p>славяне</p>
+            </div>
+          </div>
+        </div>
+        <div class="white game disc">
+          <img
+            data-js="fl-apple"
+            class="apple1"
+            src="assets\img\apple.svg"
+            alt=""
+          />
+          <img
+            data-js="fl-apple"
+            class="apple2"
+            src="assets\img\apple.svg"
+            alt=""
+          />
+          <img
+            data-js="fl-apple"
+            class="apple3"
+            src="assets\img\apple.svg"
+            alt=""
+          />
+          <img
+            data-js="fl-apple"
+            class="apple4"
+            src="assets\img\apple.svg"
+            alt=""
+          />
+          <p data-js="fl-disc" hidden>
+            Почти все народы видели в деревьях символ силы и жизненной энергии.
+            В многих мифах деревья, а так же их плоды имели особые качества.
+            Например как золотые яблоки в мифах древней Греции.
           </p>
         </div>
       </div>
     </section>
-    <section class="screen">
-      <div class="rowBlock">
-        <div class="subTitle blue">
+    <section id="videogames" class="screen">
+      <div class="columnBlock">
+        <div class="subTitle yellow">
           <h1>ВИДЕОИГРЫ</h1>
         </div>
         <div class="columnBlock">
-          <div class="yellow disc">
+          <div class="red disc">
             <p>
               Деревья вдохновляют людей и в видеоиграх. Иногда вокруг деревьев
               строиться сюжет. А иногда они работают как декорации, защита или
               источник ресурсов.
             </p>
           </div>
-          <div class="white"></div>
+          <div class="white roots game"></div>
         </div>
       </div>
-      <div class="blue"></div>
+      <div class="blue attack game"></div>
     </section>
-    <section class="screen">
-      <div class="rowBlock">
-        <div class="subTitle white">
+    <section id="design" class="screen">
+      <div class="columnBlock">
+        <div class="subTitle blue">
           <h1>ДИЗАЙН</h1>
         </div>
         <div class="columnBlock">
-          <div class="red">
+          <div class="red game">
             <img src="assets\img\mergeTree.svg" alt="" /><img
               src="assets\img\mergeHouse.svg"
               alt=""
@@ -92,14 +152,22 @@
           </div>
         </div>
       </div>
-      <div class="yellow"></div>
+      <div class="yellow game">
+        <img class="tree1" src="assets\img\tree1.svg" alt="" />
+        <img class="tree2" src="assets\img\tree2.svg" alt="" />
+        <img class="rock1" src="assets\img\rock1.svg" alt="" />
+        <img class="rock2" src="assets\img\rock2.svg" alt="" />
+        <img class="rock3" src="assets\img\rock3.svg" alt="" />
+        <img class="rock4" src="assets\img\rock4.svg" alt="" />
+      </div>
     </section>
-    <section class="screen">
+    <section id="end" class="screen">
       <div class="columnBlock">
         <div class="subTitle red">
           <h1>КОНЕЦ</h1>
         </div>
-        <div class="yellow endTree">
+        <div class="yellow endTree" data-js="end-treeGame">
+          <div class="endHover yellow" data-js="end-hover"></div>
           <img class="binarTree" src="assets\img\binarTree.svg" alt="" />
           <div>
             <p>Но есть и другие примеры, где деревья служили вдохновением</p>
@@ -112,5 +180,8 @@
       </div>
     </section>
     <script src="./js/script.js"></script>
+    <script src="./js/folklore.js"></script>
+    <script src="./js/title.js"></script>
+    <script src="./js/end.js"></script>
   </body>
 </html>
