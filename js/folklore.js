@@ -44,6 +44,27 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
   }
+  function Compare() {
+    let tab = document.querySelector('[data-test="trees"]');
+    let names = Array.from(tab.children);
+    let swappable = new Draggable.Swappable(names, {
+      draggable: ".Block--isDraggable",
+      mirror: { constrainDimensions: true },
+    });
+    swappable.on("drag:stop", () => {
+      requestAnimationFrame(() => {
+        let curTab = Array.from(tab.children);
+        curTab.forEach((img, i) => {
+          const imgIndex = parseInt(img.getAttribute("data-index")) - 1;
+          if (i == imgIndex) {
+            img.classList.remove("Block--isDraggable");
+            img.style.opacity = "70%";
+          }
+        });
+      });
+    });
+  }
+  Compare();
   Apple();
   Slider();
 });

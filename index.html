@@ -10,6 +10,7 @@
       href="assets\img\Favicon.svg"
       type="image/x-icon"
     />
+    <script src="https://cdn.jsdelivr.net/npm/@shopify/draggable@1.0.0-beta.11/lib/draggable.bundle.js"></script>
   </head>
   <body>
     <section id="title" class="screen white">
@@ -33,14 +34,76 @@
           </p>
         </div>
       </div>
-      <div class="white titleGame"></div>
+      <div class="titleGame" data-test="titleGame">
+        <img src="assets/img/3.svg" class="Block--isDraggable" data-index="3" />
+        <img src="assets/img/1.svg" class="Block--isDraggable" data-index="1" />
+        <img src="assets/img/9.svg" class="Block--isDraggable" data-index="9" />
+        <img
+          src="assets/img/10.svg"
+          class="Block--isDraggable"
+          data-index="10"
+        />
+        <img
+          src="assets/img/11.svg"
+          class="Block--isDraggable"
+          data-index="11"
+        />
+        <img
+          src="assets/img/12.svg"
+          class="Block--isDraggable"
+          data-index="12"
+        />
+        <img src="assets/img/5.svg" class="Block--isDraggable" data-index="5" />
+        <img src="assets/img/2.svg" class="Block--isDraggable" data-index="2" />
+        <img src="assets/img/4.svg" class="Block--isDraggable" data-index="4" />
+        <img src="assets/img/6.svg" class="Block--isDraggable" data-index="6" />
+        <img src="assets/img/8.svg" class="Block--isDraggable" data-index="8" />
+        <img src="assets/img/7.svg" class="Block--isDraggable" data-index="7" />
+      </div>
     </section>
     <section id="folklore" class="screen">
       <div class="columnBlock">
         <div class="subTitle white">
           <h1>ФОЛЬКЛОР</h1>
         </div>
-        <div class="red compare"></div>
+        <div class="red compare">
+          <div class="compareColumn">
+            <div class="nameBox yellow"><p>Дафна</p></div>
+            <div class="nameBox yellow"><p>Филемон</p></div>
+            <div class="nameBox yellow"><p>Бавкида</p></div>
+            <div class="nameBox yellow"><p>Питис</p></div>
+            <div class="nameBox yellow"><p>Минфа</p></div>
+            <div class="nameBox yellow"><p>Кипарис</p></div>
+          </div>
+          <div class="compareColumn">
+            <img src="assets\img\arrow.png" />
+            <img src="assets\img\arrow.png" />
+            <img src="assets\img\arrow.png" />
+            <img src="assets\img\arrow.png" />
+            <img src="assets\img\arrow.png" />
+            <img src="assets\img\arrow.png" />
+          </div>
+          <div class="trees" data-test="trees">
+            <div class="nameBox white Block--isDraggable" data-index="6">
+              <p>Кипарис</p>
+            </div>
+            <div class="nameBox white Block--isDraggable" data-index="5">
+              <p>Мята</p>
+            </div>
+            <div class="nameBox white Block--isDraggable" data-index="4">
+              <p>Сосна</p>
+            </div>
+            <div class="nameBox white Block--isDraggable" data-index="3">
+              <p>Липа</p>
+            </div>
+            <div class="nameBox white Block--isDraggable" data-index="1">
+              <p>Лавр</p>
+            </div>
+            <div class="nameBox white Block--isDraggable" data-index="2">
+              <p>Дуб</p>
+            </div>
+          </div>
+        </div>
       </div>
       <div class="columnBlock">
         <div class="yellow selector">
@@ -125,7 +188,11 @@
               источник ресурсов.
             </p>
           </div>
-          <div class="white roots game"></div>
+          <div class="white roots game">
+            <img src="assets\img\root.svg" />
+            <img src="assets\img\root.svg" />
+            <img src="assets\img\root.svg" />
+          </div>
         </div>
       </div>
       <div class="blue attack game"></div>
