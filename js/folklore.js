@@ -2,6 +2,7 @@ document.addEventListener("DOMContentLoaded", () => {
   function Slider() {
     let curPageIndex = 0;
     let leftArrow = document.querySelector("[data-js='fl-la']");
+    let examplePage = document.querySelector("[data-js='fl-exPage']");
     let slider = document.querySelector("[data-js='fl-slider']");
     let rightArrow = document.querySelector("[data-js='fl-ra']");
     function changePage(delta) {
@@ -18,7 +19,7 @@ document.addEventListener("DOMContentLoaded", () => {
         leftArrow.hidden = false;
         rightArrow.hidden = false;
       }
-      slider.style.left = `-${50 * curPageIndex}svw`;
+      slider.style.left = `-${examplePage.getBoundingClientRect().width * curPageIndex}px`;
     }
     leftArrow.hidden = true;
     leftArrow.addEventListener("pointerdown", () => {
@@ -45,7 +46,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
   function Compare() {
-    let tab = document.querySelector('[data-test="trees"]');
+    let tab = document.querySelector('[data-js="trees"]');
     let names = Array.from(tab.children);
     let swappable = new Draggable.Swappable(names, {
       draggable: ".Block--isDraggable",

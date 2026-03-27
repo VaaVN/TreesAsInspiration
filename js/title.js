@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
   function TitleGame() {
-    let tab = document.querySelector('[data-test="titleGame"]');
+    let tab = document.querySelector('[data-js="titleGame"]');
     let pictures = Array.from(tab.children);
     let swappable = new Draggable.Swappable(pictures, {
       draggable: ".Block--isDraggable",

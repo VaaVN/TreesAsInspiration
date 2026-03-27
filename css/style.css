@@ -1,5 +1,9 @@
 @import url("reset.css");
 @import url("font.css");
+@import url("ids.css");
+html {
+  overflow-y: scroll;
+}
 body {
   display: flex;
   flex-direction: column;
@@ -73,9 +77,10 @@ img {
   overflow: hidden;
 }
 .trees {
+  height: 100%;
   display: grid;
-  grid-template-rows: repeat(6, max-content);
-  gap: 70px;
+  grid-template-rows: repeat(6, 1fr);
+  place-items: center;
 }
 .titleGame {
   align-items: center;
@@ -91,7 +96,8 @@ img {
     width: auto;
   }
 }
-.Block--isDraggable:active {
+.Block--isDraggable {
+  touch-action: none;
   cursor: grabbing;
   touch-action: none;
 }
@@ -156,10 +162,22 @@ img {
   align-self: center;
 }
 .flower {
-  align-items: center;
+  align-items: end;
   align-self: stretch;
   width: 100%;
   height: 100%;
+  display: flex;
+  position: relative;
+  justify-content: center;
+}
+.flowerImg {
+  width: 40%;
+  transform: translateY(0);
+  transition: 0.2s ease-in;
+}
+.qr {
+  position: absolute;
+  top: 5%;
 }
 .aboutMe {
   align-items: center;
@@ -167,6 +185,9 @@ img {
   width: 100%;
   height: 100%;
   cursor: url("../assets/img/hammerEnd.svg"), auto;
+  display: flex;
+  position: relative;
+  justify-content: center;
 }
 .game {
   align-items: center;
@@ -185,15 +206,18 @@ img {
   padding: 24px;
 }
 .compareColumn {
+  width: 30%;
   height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  display: grid;
+  grid-template-rows: repeat(6, 1fr);
+  align-items: stretch;
+  justify-items: stretch;
+  place-items: center;
 }
 .nameBox {
   display: flex;
-  width: 300px;
-  height: 80px;
+  width: 110%;
+  height: 80%;
   align-items: center;
   justify-content: center;
 }
@@ -231,6 +255,10 @@ img {
   z-index: 99;
   left: 2%;
   transform: translateY(-50%);
+}
+.item {
+  touch-action: none;
+  position: absolute;
 }
 .rightArrow {
   position: absolute;
@@ -271,7 +299,16 @@ img {
 }
 .attack {
   cursor: url("../assets/img/sword.png"), auto;
+  background-image: url("../assets/img/gameBG.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: end;
 }
+
 .endHover {
   transition: 0.6s ease-in;
   bottom: 0;
@@ -279,18 +316,125 @@ img {
   z-index: 99;
   width: 100%;
   height: 100%;
+  animation: colorAnim 2s ease-in-out infinite;
 }
-/*
+@keyframes colorAnim {
+  0% {
+    background-color: #e0a03f;
+  }
+  50% {
+    background-color: #b8372d;
+  }
+  100% {
+    background-color: #e0a03f;
+  }
+}
+
+.dragon {
+  width: 90%;
+  transform: translateY(-20%);
+  transition: 0.2s ease-in;
+}
+.progressBar {
+  z-index: 99;
+  width: 90%;
+  height: 5%;
+  background-color: #431616;
+  position: absolute;
+  bottom: 5%;
+}
+.progress {
+  width: 100%;
+  height: 100%;
+  background-color: #e0a03f;
+  z-index: 99;
+}
+.root {
+  height: 70%;
+  position: absolute;
+  transition: 0.1s ease-in;
+}
+.box {
+  width: 35%;
+  z-index: 50;
+  transition: 0.2s ease-in;
+}
+.myInfo {
+  position: absolute;
+  transform: scale(0.01) rotate(90deg);
+  transition: 0.5s ease-in;
+}
+.lt {
+  text-align: left;
+}
+.merge {
+  display: flex;
+  padding: 0 60px;
+  justify-content: center;
+}
+.house {
+  touch-action: none;
+  position: absolute;
+  right: 5%;
+  height: 80%;
+}
+.tree {
+  position: absolute;
+  left: 48px;
+  height: 80%;
+}
 @media (max-width: 1024px) {
+  .titleGame {
+    img {
+      height: 20vw;
+      width: auto;
+    }
+  }
   .screen {
     height: 200svh;
     flex-direction: column;
+  }
+  .selectInfo {
+    display: flex;
+    width: 100svw;
+    height: 50swh;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
   h1 {
     font-size: 96px;
   }
 }
+@media (max-width: 850px) {
+  h3 {
+    font-size: 36px;
+  }
+}
 @media (max-width: 450px) {
+  .merge {
+    img {
+      width: 20svw;
+    }
+  }
+  .selectInfo {
+    img {
+      height: 50%;
+    }
+  }
+  .titleGame {
+    img {
+      height: 25vw;
+      width: auto;
+    }
+  }
+  .item {
+    width: 35svw;
+    height: auto;
+  }
+  .dragon {
+    transform: translateY(-100%);
+  }
   .screen {
     height: 200svh;
     flex-direction: column;
@@ -309,4 +453,3 @@ img {
     height: auto;
   }
 }
-*/

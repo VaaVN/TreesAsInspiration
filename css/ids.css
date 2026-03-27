@@ -1,0 +1,37 @@
+#root1 {
+  left: 5%;
+  bottom: 0;
+}
+#root2 {
+  left: 40%;
+  bottom: 0;
+}
+#root3 {
+  left: 75%;
+  bottom: 0;
+}
+#tree1 {
+  top: 5%;
+  left: 5%;
+}
+#tree2 {
+  right: 15%;
+  bottom: 25%;
+}
+#rock1 {
+  top: 20%;
+  left: 5%;
+}
+
+#rock2 {
+  top: 10%;
+  left: 70%;
+}
+#rock3 {
+  top: 60%;
+  left: 50%;
+}
+#rock4 {
+  bottom: 20%;
+  left: 20%;
+}

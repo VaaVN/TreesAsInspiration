@@ -23,7 +23,6 @@
             class="titleTree"
             data-js="tl-tree"
             src="assets\img\titleTree.svg"
-            alt=""
           />
         </div>
         <div class="title blue disc">
@@ -34,7 +33,7 @@
           </p>
         </div>
       </div>
-      <div class="titleGame" data-test="titleGame">
+      <div class="titleGame" data-js="titleGame">
         <img src="assets/img/3.svg" class="Block--isDraggable" data-index="3" />
         <img src="assets/img/1.svg" class="Block--isDraggable" data-index="1" />
         <img src="assets/img/9.svg" class="Block--isDraggable" data-index="9" />
@@ -83,7 +82,7 @@
             <img src="assets\img\arrow.png" />
             <img src="assets\img\arrow.png" />
           </div>
-          <div class="trees" data-test="trees">
+          <div class="compareColumn" data-js="trees">
             <div class="nameBox white Block--isDraggable" data-index="6">
               <p>Кипарис</p>
             </div>
@@ -111,62 +110,40 @@
             class="leftArrow"
             data-js="fl-la"
             src="assets\img\leftArrow.svg"
-            alt=""
           />
           <img
             class="rightArrow"
             data-js="fl-ra"
             src="assets\img\rightArrow.svg"
-            alt=""
           />
           <div data-js="fl-slider" class="slider">
-            <div class="selectInfo">
-              <img src="assets\img\huluppu.svg" alt="" />
+            <div data-js="fl-exPage" class="selectInfo">
+              <img src="assets\img\huluppu.svg" />
               <h3>Хулуппу</h3>
               <p>шумеры</p>
             </div>
             <div class="selectInfo">
-              <img src="assets\img\ashoka.svg" alt="" />
+              <img src="assets\img\ashoka.svg" />
               <h3>Ашока</h3>
               <p>буддизм</p>
             </div>
             <div class="selectInfo">
-              <img src="assets\img\igdrasil.svg" alt="" />
+              <img src="assets\img\igdrasil.svg" />
               <h3>Иггдрасиль</h3>
               <p>скандинавы</p>
             </div>
             <div class="selectInfo">
-              <img src="assets\img\worldTree.svg" alt="" />
+              <img src="assets\img\worldTree.svg" />
               <h3>Мировое дерево</h3>
               <p>славяне</p>
             </div>
           </div>
         </div>
         <div class="white game disc">
-          <img
-            data-js="fl-apple"
-            class="apple1"
-            src="assets\img\apple.svg"
-            alt=""
-          />
-          <img
-            data-js="fl-apple"
-            class="apple2"
-            src="assets\img\apple.svg"
-            alt=""
-          />
-          <img
-            data-js="fl-apple"
-            class="apple3"
-            src="assets\img\apple.svg"
-            alt=""
-          />
-          <img
-            data-js="fl-apple"
-            class="apple4"
-            src="assets\img\apple.svg"
-            alt=""
-          />
+          <img data-js="fl-apple" class="apple1" src="assets\img\apple.svg" />
+          <img data-js="fl-apple" class="apple2" src="assets\img\apple.svg" />
+          <img data-js="fl-apple" class="apple3" src="assets\img\apple.svg" />
+          <img data-js="fl-apple" class="apple4" src="assets\img\apple.svg" />
           <p data-js="fl-disc" hidden>
             Почти все народы видели в деревьях символ силы и жизненной энергии.
             В многих мифах деревья, а так же их плоды имели особые качества.
@@ -189,13 +166,33 @@
             </p>
           </div>
           <div class="white roots game">
-            <img src="assets\img\root.svg" />
-            <img src="assets\img\root.svg" />
-            <img src="assets\img\root.svg" />
+            <img
+              id="root1"
+              class="root"
+              data-js="root"
+              src="assets\img\root.svg"
+            />
+            <img
+              id="root2"
+              class="root"
+              data-js="root"
+              src="assets\img\root.svg"
+            />
+            <img
+              id="root3"
+              class="root"
+              data-js="root"
+              src="assets\img\root.svg"
+            />
           </div>
         </div>
       </div>
-      <div class="blue attack game"></div>
+      <div class="blue attack game">
+        <img class="dragon" data-js="dragon" src="assets\img\dragon.svg" />
+        <div class="progressBar" data-js="dragonBar">
+          <div class="progress" data-js="dragonProgress"></div>
+        </div>
+      </div>
     </section>
     <section id="design" class="screen">
       <div class="columnBlock">
@@ -203,10 +200,16 @@
           <h1>ДИЗАЙН</h1>
         </div>
         <div class="columnBlock">
-          <div class="red game">
-            <img src="assets\img\mergeTree.svg" alt="" /><img
+          <div data-js="mergeGame" class="red merge game">
+            <img
+              data-js="mergeTree"
+              class="tree"
+              src="assets\img\mergeTree.svg"
+            />
+            <img
+              data-js="mergeHouse"
+              class="house"
               src="assets\img\mergeHouse.svg"
-              alt=""
             />
           </div>
           <div class="blue disc">
@@ -219,13 +222,43 @@
           </div>
         </div>
       </div>
-      <div class="yellow game">
-        <img class="tree1" src="assets\img\tree1.svg" alt="" />
-        <img class="tree2" src="assets\img\tree2.svg" alt="" />
-        <img class="rock1" src="assets\img\rock1.svg" alt="" />
-        <img class="rock2" src="assets\img\rock2.svg" alt="" />
-        <img class="rock3" src="assets\img\rock3.svg" alt="" />
-        <img class="rock4" src="assets\img\rock4.svg" alt="" />
+      <div class="yellow game" data-js="gardenGame">
+        <img
+          id="tree1"
+          data-js="item"
+          class="item"
+          src="assets\img\tree1.svg"
+        />
+        <img
+          id="tree2"
+          data-js="item"
+          class="item"
+          src="assets\img\tree2.svg"
+        />
+        <img
+          id="rock1"
+          data-js="item"
+          class="item"
+          src="assets\img\rock1.svg"
+        />
+        <img
+          id="rock2"
+          data-js="item"
+          class="item"
+          src="assets\img\rock2.svg"
+        />
+        <img
+          id="rock3"
+          data-js="item"
+          class="item"
+          src="assets\img\rock3.svg"
+        />
+        <img
+          id="rock4"
+          data-js="item"
+          class="item"
+          src="assets\img\rock4.svg"
+        />
       </div>
     </section>
     <section id="end" class="screen">
@@ -234,20 +267,35 @@
           <h1>КОНЕЦ</h1>
         </div>
         <div class="yellow endTree" data-js="end-treeGame">
-          <div class="endHover yellow" data-js="end-hover"></div>
-          <img class="binarTree" src="assets\img\binarTree.svg" alt="" />
+          <div class="endHover" data-js="end-hover"></div>
+          <img class="binarTree" src="assets\img\binarTree.svg" />
           <div>
             <p>Но есть и другие примеры, где деревья служили вдохновением</p>
           </div>
         </div>
       </div>
       <div class="columnBlock">
-        <div class="white flower"></div>
-        <div class="blue aboutMe"></div>
+        <div class="white flower">
+          <img class="qr" data-js="qr" hidden src="assets\img\qr.svg" />
+          <img
+            class="flowerImg"
+            data-js="flower"
+            src="assets\img\closeFlower.svg"
+          />
+        </div>
+        <div class="blue aboutMe">
+          <img class="box" data-js="box" src="assets\img\box.svg" />
+          <h2 class="myInfo lt" data-js="myName">Нечаев<br />Валерий</h2>
+          <h2 class="myInfo" data-js="myGroup">Брицп<br />251</h2>
+          <div class="progressBar" data-js="boxBar">
+            <div class="progress" data-js="boxProgress"></div>
+          </div>
+        </div>
       </div>
     </section>
-    <script src="./js/script.js"></script>
     <script src="./js/folklore.js"></script>
+    <script src="./js/videogames.js"></script>
+    <script src="./js/design.js"></script>
     <script src="./js/title.js"></script>
     <script src="./js/end.js"></script>
   </body>
